@@ -1,0 +1,30 @@
+{
+  "name": "dot_indexer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc -b",
+    "prepack": "rm -rf dist && npm build",
+    "test": "jest",
+    "codegen": "./node_modules/.bin/subql codegen"
+  },
+  "homepage": "https://github.com/subquery/subql-starter",
+  "repository": "github:subquery/subql-starter",
+  "files": [
+    "dist",
+    "schema.graphql",
+    "project.yaml"
+  ],
+  "author": "Hao",
+  "license": "MIT",
+  "devDependencies": {
+    "@polkadot/api": "^6",
+    "@subql/types": "latest",
+    "typescript": "^4.5.4",
+    "@subql/cli": "^0.16.2"
+  },
+  "dependencies": {
+    "moonbeam-types-bundle": "^2.0.2"
+  }
+}
