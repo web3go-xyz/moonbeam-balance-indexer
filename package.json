@@ -26,5 +26,8 @@
   },
   "dependencies": {
     "moonbeam-types-bundle": "^2.0.2"
+  },
+  "exports": {
+    "chaintypes": "./src/chaintypes.ts"
   }
 }
