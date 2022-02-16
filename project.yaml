@@ -1,6 +1,6 @@
 specVersion: 0.2.0
-description: ''
-repository: ''
+description: 'Moonriver balance and activities indexer'
+repository: 'https://github.com/web3go-xyz/moonbeam-balance-indexer.git@moonriver-balance-indexer'
 schema: 
   file: ./schema.graphql
 network:
@@ -12,6 +12,7 @@ dataSources:
   - name: main
     kind: substrate/Runtime
     startBlock: 1052242 # => runtime 1001
+
     mapping:
       file: ./dist/index.js
       handlers:
@@ -19,9 +20,4 @@ dataSources:
           kind: substrate/BlockHandler
         # - handler: handleEvent
         #   kind: substrate/EventHandler
-      #handlers:
-      #  - handler: handleTransfer
-      #    kind: substrate/EventHandler
-      #    filter:
-      #      module: balances
-      #      method: Transfer
+
