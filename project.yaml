@@ -1,6 +1,6 @@
 specVersion: 0.2.0
-description: ''
-repository: ''
+description: 'Moonbeam balance and activities indexer'
+repository: 'https://github.com/web3go-xyz/moonbeam-balance-indexer.git'
 schema: 
   file: ./schema.graphql
 network:
@@ -11,7 +11,7 @@ network:
 dataSources:
   - name: main
     kind: substrate/Runtime
-    startBlock: 1  # 7560558   7560585 7560724
+    startBlock: 1   
     mapping:
       file: ./dist/index.js
       handlers:
@@ -19,9 +19,4 @@ dataSources:
           kind: substrate/BlockHandler
         # - handler: handleEvent
         #   kind: substrate/EventHandler
-      #handlers:
-      #  - handler: handleTransfer
-      #    kind: substrate/EventHandler
-      #    filter:
-      #      module: balances
-      #      method: Transfer
+
