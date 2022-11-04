@@ -1,5 +1,5 @@
 {
-  "name": "dot_indexer",
+  "name": "moonriver-balance-indexer",
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
@@ -9,8 +9,8 @@
     "test": "jest",
     "codegen": "./node_modules/.bin/subql codegen"
   },
-  "homepage": "https://github.com/subquery/subql-starter",
-  "repository": "github:subquery/subql-starter",
+  "homepage": "",
+  "repository": "",
   "files": [
     "dist",
     "schema.graphql",
@@ -19,13 +19,13 @@
   "author": "Hao",
   "license": "MIT",
   "devDependencies": {
-    "@polkadot/api": "^6",
+    "@polkadot/api": "^9.0.0",
+    "@subql/cli": "latest",
     "@subql/types": "latest",
-    "typescript": "^4.5.4",
-    "@subql/cli": "^0.16.2"
+    "typescript": "^4.6.2"
   },
   "dependencies": {
-    "moonbeam-types-bundle": "^2.0.2"
+    "moonbeam-types-bundle": "^2.0.9"
   },
   "exports": {
     "chaintypes": "./src/chaintypes.ts"

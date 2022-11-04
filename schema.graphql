@@ -3,8 +3,8 @@ type Account @entity {
   freeBalance: BigInt
   reserveBalance: BigInt
   totalBalance: BigInt
-  aid: BigInt!
-  atBlock: BigInt!
+  aid: BigInt
+  atBlock: BigInt
 }
 
 type AccountSnapshot @entity {

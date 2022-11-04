@@ -1,23 +1,29 @@
-specVersion: 0.2.0
-description: 'Moonriver balance and activities indexer'
+specVersion: 1.0.0
+description: 'moonriver-balance-indexer'
 repository: 'https://github.com/web3go-xyz/moonbeam-balance-indexer.git@moonriver-balance-indexer'
-schema: 
+schema:
   file: ./schema.graphql
+runner:
+  node:
+    name: "@subql/node"
+    version: ">=1.2.1"
+  query:
+    name: "@subql/query"
+    version: ">=1.2.1"
 network:
-  endpoint: 'wss://moonriver.api.onfinality.io/public-ws'
-  genesisHash: '0x401a1f9dca3da46f5c4091016c8a2f26dcea05865116b286f60f668207d1474b'
+  genesisHash: "0x401a1f9dca3da46f5c4091016c8a2f26dcea05865116b286f60f668207d1474b"
+  #  endpoint: "wss://moonriver.api.onfinality.io/public-ws"
+  endpoint: "ws://3.1.235.180:9944"
+  dictionary: "https://api.subquery.network/sq/subquery/moonriver-dictionary"
+
   chaintypes:
     file: ./dist/chaintypes.js
 dataSources:
   - name: main
     kind: substrate/Runtime
-    startBlock: 1052242 # => runtime 1001
-
+    startBlock: 1052242
     mapping:
       file: ./dist/index.js
       handlers:
         - handler: handleBlock
           kind: substrate/BlockHandler
-        # - handler: handleEvent
-        #   kind: substrate/EventHandler
-
