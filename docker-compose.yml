@@ -3,7 +3,7 @@ version: '3'
 services:
 
   subquery-node-moonbeam-balance-v2:
-    image: onfinality/subql-node:v1.10.2
+    image: onfinality/subql-node:v1.14.1
     restart: always
     environment:
       DB_USER: postgres
